@@ -4,3 +4,6 @@
 [submodule "Lobddit/frameworks/Haneke"]
 	path = Lobddit/frameworks/Haneke
 	url = https://github.com/Haneke/Haneke.git
+[submodule "Lobddit/frameworks/CHTCollectionViewWaterfallLayout"]
+	path = Lobddit/frameworks/CHTCollectionViewWaterfallLayout
+	url = https://github.com/chiahsien/CHTCollectionViewWaterfallLayout.git

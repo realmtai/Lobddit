@@ -18,6 +18,7 @@
 		EE75D47D22E0FDF800618223 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75D47C22E0FDF800618223 /* ArticleViewController.swift */; };
 		EE75D48222E1069A00618223 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE75D48122E1069A00618223 /* WebKit.framework */; };
 		EE75D48422E10B7A00618223 /* SystemFrameworkExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75D48322E10B7A00618223 /* SystemFrameworkExtenstion.swift */; };
+		EE75D48722E10E5300618223 /* CHTCollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75D48622E10E5200618223 /* CHTCollectionViewWaterfallLayout.swift */; };
 		EEF29EB222E09D5B00BA2012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */; };
 		EEF29EB422E09D5B00BA2012 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EB322E09D5B00BA2012 /* MainViewController.swift */; };
 		EEF29EB722E09D5B00BA2012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF29EB522E09D5B00BA2012 /* Main.storyboard */; };
@@ -97,6 +98,7 @@
 		EE75D47C22E0FDF800618223 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		EE75D48122E1069A00618223 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EE75D48322E10B7A00618223 /* SystemFrameworkExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFrameworkExtenstion.swift; sourceTree = "<group>"; };
+		EE75D48622E10E5200618223 /* CHTCollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHTCollectionViewWaterfallLayout.swift; path = Lobddit/frameworks/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
 		EEF29EAE22E09D5B00BA2012 /* Lobddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lobddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEF29EB322E09D5B00BA2012 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -199,9 +201,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EE75D48522E10DCC00618223 /* CHTCollectionViewWaterfallLayout */ = {
+			isa = PBXGroup;
+			children = (
+				EE75D48622E10E5200618223 /* CHTCollectionViewWaterfallLayout.swift */,
+			);
+			name = CHTCollectionViewWaterfallLayout;
+			sourceTree = "<group>";
+		};
 		EEF29EA522E09D5B00BA2012 = {
 			isa = PBXGroup;
 			children = (
+				EE75D48522E10DCC00618223 /* CHTCollectionViewWaterfallLayout */,
 				EE75D46122E0F53900618223 /* Haneke */,
 				EEF29EDF22E0E4AC00BA2012 /* Alamofire */,
 				EEF29ED122E09E2800BA2012 /* README.md */,
@@ -410,6 +421,7 @@
 				EE75D47822E0F58600618223 /* UIButton+Haneke.m in Sources */,
 				EEF29F0522E0E4C800BA2012 /* CachedResponseHandler.swift in Sources */,
 				EEF29F1822E0E4C800BA2012 /* URLConvertible+URLRequestConvertible.swift in Sources */,
+				EE75D48722E10E5300618223 /* CHTCollectionViewWaterfallLayout.swift in Sources */,
 				EEF29F1C22E0E4C800BA2012 /* URLRequest+Alamofire.swift in Sources */,
 				EEF29EB422E09D5B00BA2012 /* MainViewController.swift in Sources */,
 				EEF29F0922E0E4C800BA2012 /* Notifications.swift in Sources */,
