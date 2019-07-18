@@ -25,9 +25,11 @@ class MainCollectionCell: UICollectionViewCell {
     var imageURL: URL? {
         get { return nil }
         set(newValue) {
-            thumbnailImage.isHidden = (newValue == nil)
             if let imageURL = newValue, imageURL.isHttps {
                 thumbnailImage.hnk_setImage(from: imageURL)
+                thumbnailImage.isHidden = false
+            } else {
+                thumbnailImage.isHidden = true
             }
         }
     }
