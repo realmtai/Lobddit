@@ -91,7 +91,7 @@ class MainViewController: UIViewController {
     
     func fetchData() {
         DispatchQueue.main.async {
-            APESuperHUD.show(style: .loadingIndicator(type: .standard), title: "Loading", message: nil, completion: nil)
+            APESuperHUD.show(style: .loadingIndicator(type: .standard), title: nil, message: "Loading", completion: nil)
         }
         api.getArticles(.swift) {[weak self] result in
             self?.workQueue.async { [weak self] in
@@ -104,7 +104,7 @@ class MainViewController: UIViewController {
                     }
                 case .failure(let error):
                     DispatchQueue.main.async {
-                        APESuperHUD.show(style: .textOnly, title: "Error",
+                        APESuperHUD.show(style: .textOnly, title: "Yikes...",
                                          message: error.localizedDescription,
                                          completion: nil)
                     }
