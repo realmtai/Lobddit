@@ -19,6 +19,11 @@
 		EE75D48222E1069A00618223 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE75D48122E1069A00618223 /* WebKit.framework */; };
 		EE75D48422E10B7A00618223 /* SystemFrameworkExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75D48322E10B7A00618223 /* SystemFrameworkExtenstion.swift */; };
 		EE75D48722E10E5300618223 /* CHTCollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75D48622E10E5200618223 /* CHTCollectionViewWaterfallLayout.swift */; };
+		EE75D49B22E11AF400618223 /* HUDStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75D49822E11AF400618223 /* HUDStyle.swift */; };
+		EE75D49C22E11AF400618223 /* APESuperHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75D49922E11AF400618223 /* APESuperHUD.swift */; };
+		EE75D49D22E11AF400618223 /* HudAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75D49A22E11AF400618223 /* HudAppearance.swift */; };
+		EE75D4A122E11BD800618223 /* APESuperHUD.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE75D49F22E11BD700618223 /* APESuperHUD.xib */; };
+		EE75D4A222E11BD800618223 /* FrameworkMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE75D4A022E11BD700618223 /* FrameworkMedia.xcassets */; };
 		EEF29EB222E09D5B00BA2012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */; };
 		EEF29EB422E09D5B00BA2012 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EB322E09D5B00BA2012 /* MainViewController.swift */; };
 		EEF29EB722E09D5B00BA2012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF29EB522E09D5B00BA2012 /* Main.storyboard */; };
@@ -99,6 +104,11 @@
 		EE75D48122E1069A00618223 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EE75D48322E10B7A00618223 /* SystemFrameworkExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFrameworkExtenstion.swift; sourceTree = "<group>"; };
 		EE75D48622E10E5200618223 /* CHTCollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHTCollectionViewWaterfallLayout.swift; path = Lobddit/frameworks/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
+		EE75D49822E11AF400618223 /* HUDStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUDStyle.swift; path = Lobddit/frameworks/APESuperHUD/Source/HUDStyle.swift; sourceTree = "<group>"; };
+		EE75D49922E11AF400618223 /* APESuperHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APESuperHUD.swift; path = Lobddit/frameworks/APESuperHUD/Source/APESuperHUD.swift; sourceTree = "<group>"; };
+		EE75D49A22E11AF400618223 /* HudAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HudAppearance.swift; path = Lobddit/frameworks/APESuperHUD/Source/HudAppearance.swift; sourceTree = "<group>"; };
+		EE75D49F22E11BD700618223 /* APESuperHUD.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = APESuperHUD.xib; sourceTree = "<group>"; };
+		EE75D4A022E11BD700618223 /* FrameworkMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FrameworkMedia.xcassets; sourceTree = "<group>"; };
 		EEF29EAE22E09D5B00BA2012 /* Lobddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lobddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEF29EB322E09D5B00BA2012 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -209,9 +219,31 @@
 			name = CHTCollectionViewWaterfallLayout;
 			sourceTree = "<group>";
 		};
+		EE75D49722E11AE200618223 /* APESuperHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EE75D49E22E11BD700618223 /* Resources */,
+				EE75D49922E11AF400618223 /* APESuperHUD.swift */,
+				EE75D49A22E11AF400618223 /* HudAppearance.swift */,
+				EE75D49822E11AF400618223 /* HUDStyle.swift */,
+			);
+			name = APESuperHUD;
+			sourceTree = "<group>";
+		};
+		EE75D49E22E11BD700618223 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE75D49F22E11BD700618223 /* APESuperHUD.xib */,
+				EE75D4A022E11BD700618223 /* FrameworkMedia.xcassets */,
+			);
+			name = Resources;
+			path = Lobddit/frameworks/APESuperHUD/Resources;
+			sourceTree = "<group>";
+		};
 		EEF29EA522E09D5B00BA2012 = {
 			isa = PBXGroup;
 			children = (
+				EE75D49722E11AE200618223 /* APESuperHUD */,
 				EE75D48522E10DCC00618223 /* CHTCollectionViewWaterfallLayout */,
 				EE75D46122E0F53900618223 /* Haneke */,
 				EEF29EDF22E0E4AC00BA2012 /* Alamofire */,
@@ -392,9 +424,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE75D4A122E11BD800618223 /* APESuperHUD.xib in Resources */,
 				EEF29EDA22E0A06E00BA2012 /* testDataNormal.json in Resources */,
 				EEF29EBC22E09D5D00BA2012 /* LaunchScreen.storyboard in Resources */,
 				EEF29EB922E09D5D00BA2012 /* Assets.xcassets in Resources */,
+				EE75D4A222E11BD800618223 /* FrameworkMedia.xcassets in Resources */,
 				EEF29ED822E0A06E00BA2012 /* testData404.json in Resources */,
 				EEF29EB722E09D5B00BA2012 /* Main.storyboard in Resources */,
 			);
@@ -423,11 +457,13 @@
 				EEF29F1822E0E4C800BA2012 /* URLConvertible+URLRequestConvertible.swift in Sources */,
 				EE75D48722E10E5300618223 /* CHTCollectionViewWaterfallLayout.swift in Sources */,
 				EEF29F1C22E0E4C800BA2012 /* URLRequest+Alamofire.swift in Sources */,
+				EE75D49D22E11AF400618223 /* HudAppearance.swift in Sources */,
 				EEF29EB422E09D5B00BA2012 /* MainViewController.swift in Sources */,
 				EEF29F0922E0E4C800BA2012 /* Notifications.swift in Sources */,
 				EE75D47622E0F58600618223 /* HNKCache.m in Sources */,
 				EEF29F0F22E0E4C800BA2012 /* ParameterEncoder.swift in Sources */,
 				EEF29F2122E0E4C800BA2012 /* RetryPolicy.swift in Sources */,
+				EE75D49C22E11AF400618223 /* APESuperHUD.swift in Sources */,
 				EEF29F1A22E0E4C800BA2012 /* URLEncodedFormEncoder.swift in Sources */,
 				EEF29F0222E0E4C800BA2012 /* Alamofire.swift in Sources */,
 				EEF29F1922E0E4C800BA2012 /* AFResult.swift in Sources */,
@@ -459,6 +495,7 @@
 				EEF29F1B22E0E4C800BA2012 /* SessionDelegate.swift in Sources */,
 				EEF29ED322E09EC400BA2012 /* RedditAPI.swift in Sources */,
 				EEF29F0B22E0E4C800BA2012 /* ResponseSerialization.swift in Sources */,
+				EE75D49B22E11AF400618223 /* HUDStyle.swift in Sources */,
 				EE75D48422E10B7A00618223 /* SystemFrameworkExtenstion.swift in Sources */,
 				EEF29F1322E0E4C800BA2012 /* EventMonitor.swift in Sources */,
 				EEF29F0722E0E4C800BA2012 /* Protector.swift in Sources */,

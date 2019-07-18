@@ -90,15 +90,24 @@ class MainViewController: UIViewController {
     //MARK:
     
     func fetchData() {
+        DispatchQueue.main.async {
+            APESuperHUD.show(style: .loadingIndicator(type: .standard), title: "Loading", message: nil, completion: nil)
+        }
         api.getArticles(.swift) {[weak self] result in
             self?.workQueue.async { [weak self] in
                 guard let strongSelf = self else { return }
                 switch result {
                 case .success(let articles):
                     strongSelf.dataStore = articles
+                    DispatchQueue.main.async {
+                        APESuperHUD.dismissAll(animated: true)
+                    }
                 case .failure(let error):
-                    // Do something here
-                    break
+                    DispatchQueue.main.async {
+                        APESuperHUD.show(style: .textOnly, title: "Error",
+                                         message: error.localizedDescription,
+                                         completion: nil)
+                    }
                 }
             }
         }

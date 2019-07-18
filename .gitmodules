@@ -7,3 +7,6 @@
 [submodule "Lobddit/frameworks/CHTCollectionViewWaterfallLayout"]
 	path = Lobddit/frameworks/CHTCollectionViewWaterfallLayout
 	url = https://github.com/chiahsien/CHTCollectionViewWaterfallLayout.git
+[submodule "Lobddit/frameworks/APESuperHUD"]
+	path = Lobddit/frameworks/APESuperHUD
+	url = https://github.com/apegroup/APESuperHUD.git
