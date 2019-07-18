@@ -19,6 +19,8 @@
 		EEF29ED922E0A06E00BA2012 /* testData404.json in Resources */ = {isa = PBXBuildFile; fileRef = EEF29ED622E0A06E00BA2012 /* testData404.json */; };
 		EEF29EDA22E0A06E00BA2012 /* testDataNormal.json in Resources */ = {isa = PBXBuildFile; fileRef = EEF29ED722E0A06E00BA2012 /* testDataNormal.json */; };
 		EEF29EDB22E0A06E00BA2012 /* testDataNormal.json in Resources */ = {isa = PBXBuildFile; fileRef = EEF29ED722E0A06E00BA2012 /* testDataNormal.json */; };
+		EEF29EDD22E0AA2E00BA2012 /* RedditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EDC22E0AA2E00BA2012 /* RedditModel.swift */; };
+		EEF29EDE22E0AA2E00BA2012 /* RedditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EDC22E0AA2E00BA2012 /* RedditModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 		EEF29ED222E09EC400BA2012 /* RedditAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditAPI.swift; sourceTree = "<group>"; };
 		EEF29ED622E0A06E00BA2012 /* testData404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testData404.json; sourceTree = "<group>"; };
 		EEF29ED722E0A06E00BA2012 /* testDataNormal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testDataNormal.json; sourceTree = "<group>"; };
+		EEF29EDC22E0AA2E00BA2012 /* RedditModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				EEF29ED222E09EC400BA2012 /* RedditAPI.swift */,
+				EEF29EDC22E0AA2E00BA2012 /* RedditModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -224,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF29EB422E09D5B00BA2012 /* ViewController.swift in Sources */,
+				EEF29EDD22E0AA2E00BA2012 /* RedditModel.swift in Sources */,
 				EEF29EB222E09D5B00BA2012 /* AppDelegate.swift in Sources */,
 				EEF29ED322E09EC400BA2012 /* RedditAPI.swift in Sources */,
 			);
@@ -234,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF29ED422E09EC400BA2012 /* RedditAPI.swift in Sources */,
+				EEF29EDE22E0AA2E00BA2012 /* RedditModel.swift in Sources */,
 				EEF29EC722E09D5D00BA2012 /* LobdditTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
