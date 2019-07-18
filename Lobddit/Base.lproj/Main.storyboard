@@ -55,6 +55,7 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="h7B-9G-R19" firstAttribute="leading" secondItem="hwJ-Ky-JKJ" secondAttribute="leading" id="GMe-VE-Cbk"/>
+                                            <constraint firstItem="h7B-9G-R19" firstAttribute="top" secondItem="hwJ-Ky-JKJ" secondAttribute="top" priority="999" id="Iu3-Dx-7nU"/>
                                             <constraint firstAttribute="trailing" secondItem="Mju-qz-7CY" secondAttribute="trailing" id="NMH-0T-ngd"/>
                                             <constraint firstItem="Mju-qz-7CY" firstAttribute="leading" secondItem="hwJ-Ky-JKJ" secondAttribute="leading" id="Ova-ik-yOK"/>
                                             <constraint firstItem="Mju-qz-7CY" firstAttribute="top" secondItem="hwJ-Ky-JKJ" secondAttribute="top" id="dh7-Uq-76c"/>

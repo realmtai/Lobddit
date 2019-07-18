@@ -1,3 +1,6 @@
 [submodule "Lobddit/frameworks/Alamofire"]
 	path = Lobddit/frameworks/Alamofire
 	url = https://github.com/Alamofire/Alamofire.git
+[submodule "Lobddit/frameworks/Haneke"]
+	path = Lobddit/frameworks/Haneke
+	url = https://github.com/Haneke/Haneke.git

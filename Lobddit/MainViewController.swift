@@ -19,6 +19,21 @@ class MainCollectionCell: UICollectionViewCell {
         set(newValue) { textLabel.text = newValue }
     }
     
+    var imageURL: URL? {
+        get { return nil }
+        set(newValue) {
+            thumbnailImage.isHidden = (newValue == nil)
+            if let imageURL = newValue {
+                thumbnailImage.hnk_setImage(from: imageURL)
+            }
+        }
+    }
+    
+    override func prepareForReuse() {
+        thumbnailImage.hnk_cancelSetImage()
+        super.prepareForReuse()
+    }
+    
 }
 
 class MainViewController: UIViewController {
@@ -83,6 +98,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         let data = dataStore[indexPath.row]
         cell.text = data.title ?? ""
+        cell.imageURL = data.thumbnail
         return cell
     }
     

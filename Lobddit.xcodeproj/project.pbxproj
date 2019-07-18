@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE75D47422E0F58600618223 /* HNKSimpleFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75D46522E0F58400618223 /* HNKSimpleFetcher.m */; };
+		EE75D47522E0F58600618223 /* UIImageView+Haneke.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75D46722E0F58400618223 /* UIImageView+Haneke.m */; };
+		EE75D47622E0F58600618223 /* HNKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75D46822E0F58400618223 /* HNKCache.m */; };
+		EE75D47722E0F58600618223 /* HNKDiskFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75D46A22E0F58400618223 /* HNKDiskFetcher.m */; };
+		EE75D47822E0F58600618223 /* UIButton+Haneke.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75D46B22E0F58500618223 /* UIButton+Haneke.m */; };
+		EE75D47922E0F58600618223 /* UIView+Haneke.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75D46D22E0F58500618223 /* UIView+Haneke.m */; };
+		EE75D47A22E0F58600618223 /* HNKNetworkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75D47122E0F58500618223 /* HNKNetworkFetcher.m */; };
+		EE75D47B22E0F58600618223 /* HNKDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75D47222E0F58500618223 /* HNKDiskCache.m */; };
 		EEF29EB222E09D5B00BA2012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */; };
 		EEF29EB422E09D5B00BA2012 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EB322E09D5B00BA2012 /* MainViewController.swift */; };
 		EEF29EB722E09D5B00BA2012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF29EB522E09D5B00BA2012 /* Main.storyboard */; };
@@ -66,6 +74,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE75D46222E0F58300618223 /* Lobddit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lobddit-Bridging-Header.h"; sourceTree = "<group>"; };
+		EE75D46322E0F58400618223 /* HNKSimpleFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HNKSimpleFetcher.h; path = Lobddit/frameworks/Haneke/Haneke/HNKSimpleFetcher.h; sourceTree = "<group>"; };
+		EE75D46422E0F58400618223 /* UIImageView+Haneke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Haneke.h"; path = "Lobddit/frameworks/Haneke/Haneke/UIImageView+Haneke.h"; sourceTree = "<group>"; };
+		EE75D46522E0F58400618223 /* HNKSimpleFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HNKSimpleFetcher.m; path = Lobddit/frameworks/Haneke/Haneke/HNKSimpleFetcher.m; sourceTree = "<group>"; };
+		EE75D46622E0F58400618223 /* UIView+Haneke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Haneke.h"; path = "Lobddit/frameworks/Haneke/Haneke/UIView+Haneke.h"; sourceTree = "<group>"; };
+		EE75D46722E0F58400618223 /* UIImageView+Haneke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Haneke.m"; path = "Lobddit/frameworks/Haneke/Haneke/UIImageView+Haneke.m"; sourceTree = "<group>"; };
+		EE75D46822E0F58400618223 /* HNKCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HNKCache.m; path = Lobddit/frameworks/Haneke/Haneke/HNKCache.m; sourceTree = "<group>"; };
+		EE75D46922E0F58400618223 /* HNKDiskFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HNKDiskFetcher.h; path = Lobddit/frameworks/Haneke/Haneke/HNKDiskFetcher.h; sourceTree = "<group>"; };
+		EE75D46A22E0F58400618223 /* HNKDiskFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HNKDiskFetcher.m; path = Lobddit/frameworks/Haneke/Haneke/HNKDiskFetcher.m; sourceTree = "<group>"; };
+		EE75D46B22E0F58500618223 /* UIButton+Haneke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Haneke.m"; path = "Lobddit/frameworks/Haneke/Haneke/UIButton+Haneke.m"; sourceTree = "<group>"; };
+		EE75D46C22E0F58500618223 /* UIButton+Haneke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Haneke.h"; path = "Lobddit/frameworks/Haneke/Haneke/UIButton+Haneke.h"; sourceTree = "<group>"; };
+		EE75D46D22E0F58500618223 /* UIView+Haneke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Haneke.m"; path = "Lobddit/frameworks/Haneke/Haneke/UIView+Haneke.m"; sourceTree = "<group>"; };
+		EE75D46E22E0F58500618223 /* HNKDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HNKDiskCache.h; path = Lobddit/frameworks/Haneke/Haneke/HNKDiskCache.h; sourceTree = "<group>"; };
+		EE75D46F22E0F58500618223 /* HNKNetworkFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HNKNetworkFetcher.h; path = Lobddit/frameworks/Haneke/Haneke/HNKNetworkFetcher.h; sourceTree = "<group>"; };
+		EE75D47022E0F58500618223 /* Haneke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Haneke.h; path = Lobddit/frameworks/Haneke/Haneke/Haneke.h; sourceTree = "<group>"; };
+		EE75D47122E0F58500618223 /* HNKNetworkFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HNKNetworkFetcher.m; path = Lobddit/frameworks/Haneke/Haneke/HNKNetworkFetcher.m; sourceTree = "<group>"; };
+		EE75D47222E0F58500618223 /* HNKDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HNKDiskCache.m; path = Lobddit/frameworks/Haneke/Haneke/HNKDiskCache.m; sourceTree = "<group>"; };
+		EE75D47322E0F58500618223 /* HNKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HNKCache.h; path = Lobddit/frameworks/Haneke/Haneke/HNKCache.h; sourceTree = "<group>"; };
 		EEF29EAE22E09D5B00BA2012 /* Lobddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lobddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEF29EB322E09D5B00BA2012 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -135,9 +161,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE75D46122E0F53900618223 /* Haneke */ = {
+			isa = PBXGroup;
+			children = (
+				EE75D47022E0F58500618223 /* Haneke.h */,
+				EE75D47322E0F58500618223 /* HNKCache.h */,
+				EE75D46822E0F58400618223 /* HNKCache.m */,
+				EE75D46E22E0F58500618223 /* HNKDiskCache.h */,
+				EE75D47222E0F58500618223 /* HNKDiskCache.m */,
+				EE75D46922E0F58400618223 /* HNKDiskFetcher.h */,
+				EE75D46A22E0F58400618223 /* HNKDiskFetcher.m */,
+				EE75D46F22E0F58500618223 /* HNKNetworkFetcher.h */,
+				EE75D47122E0F58500618223 /* HNKNetworkFetcher.m */,
+				EE75D46322E0F58400618223 /* HNKSimpleFetcher.h */,
+				EE75D46522E0F58400618223 /* HNKSimpleFetcher.m */,
+				EE75D46C22E0F58500618223 /* UIButton+Haneke.h */,
+				EE75D46B22E0F58500618223 /* UIButton+Haneke.m */,
+				EE75D46422E0F58400618223 /* UIImageView+Haneke.h */,
+				EE75D46722E0F58400618223 /* UIImageView+Haneke.m */,
+				EE75D46622E0F58400618223 /* UIView+Haneke.h */,
+				EE75D46D22E0F58500618223 /* UIView+Haneke.m */,
+			);
+			name = Haneke;
+			sourceTree = "<group>";
+		};
 		EEF29EA522E09D5B00BA2012 = {
 			isa = PBXGroup;
 			children = (
+				EE75D46122E0F53900618223 /* Haneke */,
 				EEF29EDF22E0E4AC00BA2012 /* Alamofire */,
 				EEF29ED122E09E2800BA2012 /* README.md */,
 				EEF29EB022E09D5B00BA2012 /* Lobddit */,
@@ -158,6 +209,7 @@
 		EEF29EB022E09D5B00BA2012 /* Lobddit */ = {
 			isa = PBXGroup;
 			children = (
+				EE75D46222E0F58300618223 /* Lobddit-Bridging-Header.h */,
 				EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */,
 				EEF29EB322E09D5B00BA2012 /* MainViewController.swift */,
 				EEF29EB522E09D5B00BA2012 /* Main.storyboard */,
@@ -280,6 +332,7 @@
 				TargetAttributes = {
 					EEF29EAD22E09D5B00BA2012 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					EEF29EC122E09D5D00BA2012 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -337,11 +390,13 @@
 			files = (
 				EEF29F1522E0E4C800BA2012 /* ParameterEncoding.swift in Sources */,
 				EEF29F1622E0E4C800BA2012 /* Request.swift in Sources */,
+				EE75D47822E0F58600618223 /* UIButton+Haneke.m in Sources */,
 				EEF29F0522E0E4C800BA2012 /* CachedResponseHandler.swift in Sources */,
 				EEF29F1822E0E4C800BA2012 /* URLConvertible+URLRequestConvertible.swift in Sources */,
 				EEF29F1C22E0E4C800BA2012 /* URLRequest+Alamofire.swift in Sources */,
 				EEF29EB422E09D5B00BA2012 /* MainViewController.swift in Sources */,
 				EEF29F0922E0E4C800BA2012 /* Notifications.swift in Sources */,
+				EE75D47622E0F58600618223 /* HNKCache.m in Sources */,
 				EEF29F0F22E0E4C800BA2012 /* ParameterEncoder.swift in Sources */,
 				EEF29F2122E0E4C800BA2012 /* RetryPolicy.swift in Sources */,
 				EEF29F1A22E0E4C800BA2012 /* URLEncodedFormEncoder.swift in Sources */,
@@ -349,21 +404,27 @@
 				EEF29F1922E0E4C800BA2012 /* AFResult.swift in Sources */,
 				EEF29F0622E0E4C800BA2012 /* RequestInterceptor.swift in Sources */,
 				EEF29F1E22E0E4C800BA2012 /* HTTPMethod.swift in Sources */,
+				EE75D47522E0F58600618223 /* UIImageView+Haneke.m in Sources */,
 				EEF29F1F22E0E4C800BA2012 /* Validation.swift in Sources */,
 				EEF29F0D22E0E4C800BA2012 /* Session.swift in Sources */,
 				EEF29F0A22E0E4C800BA2012 /* RequestTaskMap.swift in Sources */,
 				EEF29F1122E0E4C800BA2012 /* MultipartUpload.swift in Sources */,
 				EEF29F0822E0E4C800BA2012 /* Response.swift in Sources */,
+				EE75D47A22E0F58600618223 /* HNKNetworkFetcher.m in Sources */,
+				EE75D47922E0F58600618223 /* UIView+Haneke.m in Sources */,
 				EEF29F2022E0E4C800BA2012 /* NetworkReachabilityManager.swift in Sources */,
+				EE75D47B22E0F58600618223 /* HNKDiskCache.m in Sources */,
 				EEF29F0322E0E4C800BA2012 /* OperationQueue+Alamofire.swift in Sources */,
 				EEF29F0C22E0E4C800BA2012 /* DispatchQueue+Alamofire.swift in Sources */,
 				EEF29F1D22E0E4C800BA2012 /* HTTPHeaders.swift in Sources */,
 				EEF29F1222E0E4C800BA2012 /* RedirectHandler.swift in Sources */,
+				EE75D47422E0F58600618223 /* HNKSimpleFetcher.m in Sources */,
 				EEF29F1422E0E4C800BA2012 /* ServerTrustEvaluation.swift in Sources */,
 				EEF29EDD22E0AA2E00BA2012 /* RedditModel.swift in Sources */,
 				EEF29EB222E09D5B00BA2012 /* AppDelegate.swift in Sources */,
 				EEF29F0E22E0E4C800BA2012 /* URLSessionConfiguration+Alamofire.swift in Sources */,
 				EEF29F1722E0E4C800BA2012 /* MultipartFormData.swift in Sources */,
+				EE75D47722E0F58600618223 /* HNKDiskFetcher.m in Sources */,
 				EEF29F2222E0E4C800BA2012 /* AFError.swift in Sources */,
 				EEF29F1B22E0E4C800BA2012 /* SessionDelegate.swift in Sources */,
 				EEF29ED322E09EC400BA2012 /* RedditAPI.swift in Sources */,
@@ -534,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2S6P642Q26;
 				INFOPLIST_FILE = Lobddit/Info.plist;
@@ -543,6 +605,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.michael.tai.Lobddit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lobddit/Lobddit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -552,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2S6P642Q26;
 				INFOPLIST_FILE = Lobddit/Info.plist;
@@ -561,6 +626,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.michael.tai.Lobddit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lobddit/Lobddit-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
