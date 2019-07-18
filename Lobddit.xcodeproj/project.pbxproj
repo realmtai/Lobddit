@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EEF29EB222E09D5B00BA2012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */; };
-		EEF29EB422E09D5B00BA2012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EB322E09D5B00BA2012 /* ViewController.swift */; };
+		EEF29EB422E09D5B00BA2012 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EB322E09D5B00BA2012 /* MainViewController.swift */; };
 		EEF29EB722E09D5B00BA2012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF29EB522E09D5B00BA2012 /* Main.storyboard */; };
 		EEF29EB922E09D5D00BA2012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEF29EB822E09D5D00BA2012 /* Assets.xcassets */; };
 		EEF29EBC22E09D5D00BA2012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF29EBA22E09D5D00BA2012 /* LaunchScreen.storyboard */; };
@@ -23,7 +23,6 @@
 		EEF29EDE22E0AA2E00BA2012 /* RedditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EDC22E0AA2E00BA2012 /* RedditModel.swift */; };
 		EEF29F0222E0E4C800BA2012 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EE022E0E4C600BA2012 /* Alamofire.swift */; };
 		EEF29F0322E0E4C800BA2012 /* OperationQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EE122E0E4C600BA2012 /* OperationQueue+Alamofire.swift */; };
-		EEF29F0422E0E4C800BA2012 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEF29EE222E0E4C600BA2012 /* Info.plist */; };
 		EEF29F0522E0E4C800BA2012 /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EE322E0E4C600BA2012 /* CachedResponseHandler.swift */; };
 		EEF29F0622E0E4C800BA2012 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EE422E0E4C600BA2012 /* RequestInterceptor.swift */; };
 		EEF29F0722E0E4C800BA2012 /* Protector.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EE522E0E4C600BA2012 /* Protector.swift */; };
@@ -69,7 +68,7 @@
 /* Begin PBXFileReference section */
 		EEF29EAE22E09D5B00BA2012 /* Lobddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lobddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EEF29EB322E09D5B00BA2012 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EEF29EB322E09D5B00BA2012 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EEF29EB622E09D5B00BA2012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEF29EB822E09D5D00BA2012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEF29EBB22E09D5D00BA2012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -160,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */,
-				EEF29EB322E09D5B00BA2012 /* ViewController.swift */,
+				EEF29EB322E09D5B00BA2012 /* MainViewController.swift */,
 				EEF29EB522E09D5B00BA2012 /* Main.storyboard */,
 				EEF29EB822E09D5D00BA2012 /* Assets.xcassets */,
 				EEF29EBA22E09D5D00BA2012 /* LaunchScreen.storyboard */,
@@ -314,7 +313,6 @@
 			files = (
 				EEF29EDA22E0A06E00BA2012 /* testDataNormal.json in Resources */,
 				EEF29EBC22E09D5D00BA2012 /* LaunchScreen.storyboard in Resources */,
-				EEF29F0422E0E4C800BA2012 /* Info.plist in Resources */,
 				EEF29EB922E09D5D00BA2012 /* Assets.xcassets in Resources */,
 				EEF29ED822E0A06E00BA2012 /* testData404.json in Resources */,
 				EEF29EB722E09D5B00BA2012 /* Main.storyboard in Resources */,
@@ -342,7 +340,7 @@
 				EEF29F0522E0E4C800BA2012 /* CachedResponseHandler.swift in Sources */,
 				EEF29F1822E0E4C800BA2012 /* URLConvertible+URLRequestConvertible.swift in Sources */,
 				EEF29F1C22E0E4C800BA2012 /* URLRequest+Alamofire.swift in Sources */,
-				EEF29EB422E09D5B00BA2012 /* ViewController.swift in Sources */,
+				EEF29EB422E09D5B00BA2012 /* MainViewController.swift in Sources */,
 				EEF29F0922E0E4C800BA2012 /* Notifications.swift in Sources */,
 				EEF29F0F22E0E4C800BA2012 /* ParameterEncoder.swift in Sources */,
 				EEF29F2122E0E4C800BA2012 /* RetryPolicy.swift in Sources */,
