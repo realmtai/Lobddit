@@ -86,11 +86,56 @@
                     <navigationItem key="navigationItem" id="qi1-c2-yRM"/>
                     <connections>
                         <outlet property="mainCollectionView" destination="E28-au-1vS" id="VCY-At-kxh"/>
+                        <segue destination="DEQ-Wx-JNQ" kind="show" identifier="gotoArticleViewController" id="R34-cw-H5x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="444.92753623188412" y="83.705357142857139"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="1Pi-oD-xcn">
+            <objects>
+                <viewController id="DEQ-Wx-JNQ" customClass="ArticleViewController" customModule="Lobddit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Thk-Hg-rkP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZoK-XI-5qE">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mA8-MC-Iv9">
+                                <rect key="frame" x="0.0" y="88" width="199" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="C49-4K-BWZ"/>
+                                    <constraint firstAttribute="width" constant="199" id="TWR-km-i8j"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZoK-XI-5qE" firstAttribute="bottom" secondItem="Dek-zo-jqy" secondAttribute="bottom" constant="34" id="3UH-ql-dTU"/>
+                            <constraint firstItem="mA8-MC-Iv9" firstAttribute="leading" secondItem="Dek-zo-jqy" secondAttribute="leading" id="AFr-Cw-fJx"/>
+                            <constraint firstItem="mA8-MC-Iv9" firstAttribute="top" secondItem="Dek-zo-jqy" secondAttribute="top" id="IiM-pn-ZCK"/>
+                            <constraint firstItem="ZoK-XI-5qE" firstAttribute="top" secondItem="Dek-zo-jqy" secondAttribute="top" id="gQe-uN-jbv"/>
+                            <constraint firstItem="ZoK-XI-5qE" firstAttribute="leading" secondItem="Dek-zo-jqy" secondAttribute="leading" id="nRA-6p-fFb"/>
+                            <constraint firstItem="Dek-zo-jqy" firstAttribute="trailing" secondItem="ZoK-XI-5qE" secondAttribute="trailing" id="q9W-W8-Mvd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dek-zo-jqy"/>
+                    </view>
+                    <connections>
+                        <outlet property="iconImageView" destination="mA8-MC-Iv9" id="ELQ-1n-nfy"/>
+                        <outlet property="webview" destination="ZoK-XI-5qE" id="PWg-Dh-Hww"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPL-ID-BM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266.6666666666667" y="83.705357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w41-dX-nHL">

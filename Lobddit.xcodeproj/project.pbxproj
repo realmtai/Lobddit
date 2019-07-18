@@ -15,6 +15,8 @@
 		EE75D47922E0F58600618223 /* UIView+Haneke.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75D46D22E0F58500618223 /* UIView+Haneke.m */; };
 		EE75D47A22E0F58600618223 /* HNKNetworkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75D47122E0F58500618223 /* HNKNetworkFetcher.m */; };
 		EE75D47B22E0F58600618223 /* HNKDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75D47222E0F58500618223 /* HNKDiskCache.m */; };
+		EE75D47D22E0FDF800618223 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75D47C22E0FDF800618223 /* ArticleViewController.swift */; };
+		EE75D48222E1069A00618223 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE75D48122E1069A00618223 /* WebKit.framework */; };
 		EEF29EB222E09D5B00BA2012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */; };
 		EEF29EB422E09D5B00BA2012 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EB322E09D5B00BA2012 /* MainViewController.swift */; };
 		EEF29EB722E09D5B00BA2012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF29EB522E09D5B00BA2012 /* Main.storyboard */; };
@@ -22,7 +24,6 @@
 		EEF29EBC22E09D5D00BA2012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF29EBA22E09D5D00BA2012 /* LaunchScreen.storyboard */; };
 		EEF29EC722E09D5D00BA2012 /* LobdditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29EC622E09D5D00BA2012 /* LobdditTests.swift */; };
 		EEF29ED322E09EC400BA2012 /* RedditAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29ED222E09EC400BA2012 /* RedditAPI.swift */; };
-		EEF29ED422E09EC400BA2012 /* RedditAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF29ED222E09EC400BA2012 /* RedditAPI.swift */; };
 		EEF29ED822E0A06E00BA2012 /* testData404.json in Resources */ = {isa = PBXBuildFile; fileRef = EEF29ED622E0A06E00BA2012 /* testData404.json */; };
 		EEF29ED922E0A06E00BA2012 /* testData404.json in Resources */ = {isa = PBXBuildFile; fileRef = EEF29ED622E0A06E00BA2012 /* testData404.json */; };
 		EEF29EDA22E0A06E00BA2012 /* testDataNormal.json in Resources */ = {isa = PBXBuildFile; fileRef = EEF29ED722E0A06E00BA2012 /* testDataNormal.json */; };
@@ -92,6 +93,8 @@
 		EE75D47122E0F58500618223 /* HNKNetworkFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HNKNetworkFetcher.m; path = Lobddit/frameworks/Haneke/Haneke/HNKNetworkFetcher.m; sourceTree = "<group>"; };
 		EE75D47222E0F58500618223 /* HNKDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HNKDiskCache.m; path = Lobddit/frameworks/Haneke/Haneke/HNKDiskCache.m; sourceTree = "<group>"; };
 		EE75D47322E0F58500618223 /* HNKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HNKCache.h; path = Lobddit/frameworks/Haneke/Haneke/HNKCache.h; sourceTree = "<group>"; };
+		EE75D47C22E0FDF800618223 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		EE75D48122E1069A00618223 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EEF29EAE22E09D5B00BA2012 /* Lobddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lobddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEF29EB322E09D5B00BA2012 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE75D48222E1069A00618223 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +189,14 @@
 			name = Haneke;
 			sourceTree = "<group>";
 		};
+		EE75D48022E1069A00618223 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE75D48122E1069A00618223 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EEF29EA522E09D5B00BA2012 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +206,7 @@
 				EEF29EB022E09D5B00BA2012 /* Lobddit */,
 				EEF29EC522E09D5D00BA2012 /* LobdditTests */,
 				EEF29EAF22E09D5B00BA2012 /* Products */,
+				EE75D48022E1069A00618223 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +225,7 @@
 				EE75D46222E0F58300618223 /* Lobddit-Bridging-Header.h */,
 				EEF29EB122E09D5B00BA2012 /* AppDelegate.swift */,
 				EEF29EB322E09D5B00BA2012 /* MainViewController.swift */,
+				EE75D47C22E0FDF800618223 /* ArticleViewController.swift */,
 				EEF29EB522E09D5B00BA2012 /* Main.storyboard */,
 				EEF29EB822E09D5D00BA2012 /* Assets.xcassets */,
 				EEF29EBA22E09D5D00BA2012 /* LaunchScreen.storyboard */,
@@ -410,6 +424,7 @@
 				EEF29F0A22E0E4C800BA2012 /* RequestTaskMap.swift in Sources */,
 				EEF29F1122E0E4C800BA2012 /* MultipartUpload.swift in Sources */,
 				EEF29F0822E0E4C800BA2012 /* Response.swift in Sources */,
+				EE75D47D22E0FDF800618223 /* ArticleViewController.swift in Sources */,
 				EE75D47A22E0F58600618223 /* HNKNetworkFetcher.m in Sources */,
 				EE75D47922E0F58600618223 /* UIView+Haneke.m in Sources */,
 				EEF29F2022E0E4C800BA2012 /* NetworkReachabilityManager.swift in Sources */,
@@ -439,7 +454,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEF29ED422E09EC400BA2012 /* RedditAPI.swift in Sources */,
 				EEF29EDE22E0AA2E00BA2012 /* RedditModel.swift in Sources */,
 				EEF29EC722E09D5D00BA2012 /* LobdditTests.swift in Sources */,
 			);

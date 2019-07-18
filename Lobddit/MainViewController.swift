@@ -23,7 +23,7 @@ class MainCollectionCell: UICollectionViewCell {
         get { return nil }
         set(newValue) {
             thumbnailImage.isHidden = (newValue == nil)
-            if let imageURL = newValue {
+            if let imageURL = newValue, let schema = imageURL.scheme, schema == "https" {
                 thumbnailImage.hnk_setImage(from: imageURL)
             }
         }
@@ -62,6 +62,12 @@ class MainViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVC = segue.destination as? ArticleViewController, let datum = sender as? Article {
+            destVC.article = datum
+        }
+    }
+    
     //MARK:- Actions
     //MARK:
     
@@ -80,13 +86,20 @@ class MainViewController: UIViewController {
         }
     }
     
-
+    func showDetail(for article: Article) {
+        performSegue(withIdentifier: "gotoArticleViewController", sender: article)
+    }
 
 
 }
 
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let datum = dataStore[indexPath.row]
+        showDetail(for: datum)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataStore.count
@@ -96,9 +109,9 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionCell.id, for: indexPath) as? MainCollectionCell else {
             return UICollectionViewCell(frame: .zero)
         }
-        let data = dataStore[indexPath.row]
-        cell.text = data.title ?? ""
-        cell.imageURL = data.thumbnail
+        let datum = dataStore[indexPath.row]
+        cell.text = datum.title ?? ""
+        cell.imageURL = datum.thumbnail
         return cell
     }
     
