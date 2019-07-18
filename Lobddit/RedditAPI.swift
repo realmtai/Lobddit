@@ -9,7 +9,7 @@
 import Foundation
 
 enum RedditEndPoint: String {
-    case swift = "https://www.reddit.com/r/subreddit/new.json?sort=new&limit=100"
+    case swift = "https://www.reddit.com/r/swift/new.json?sort=new&limit=100"
 }
 
 class RedditAPI {
