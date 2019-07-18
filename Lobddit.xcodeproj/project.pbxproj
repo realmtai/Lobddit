@@ -36,6 +36,7 @@
 		EEF29EC222E09D5D00BA2012 /* LobdditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LobdditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF29EC622E09D5D00BA2012 /* LobdditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobdditTests.swift; sourceTree = "<group>"; };
 		EEF29EC822E09D5D00BA2012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEF29ED122E09E2800BA2012 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +60,7 @@
 		EEF29EA522E09D5B00BA2012 = {
 			isa = PBXGroup;
 			children = (
+				EEF29ED122E09E2800BA2012 /* README.md */,
 				EEF29EB022E09D5B00BA2012 /* Lobddit */,
 				EEF29EC522E09D5D00BA2012 /* LobdditTests */,
 				EEF29EAF22E09D5B00BA2012 /* Products */,
