@@ -1,0 +1,3 @@
+[submodule "Lobddit/frameworks/Alamofire"]
+	path = Lobddit/frameworks/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
