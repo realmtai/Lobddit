@@ -23,7 +23,7 @@ class MainCollectionCell: UICollectionViewCell {
         get { return nil }
         set(newValue) {
             thumbnailImage.isHidden = (newValue == nil)
-            if let imageURL = newValue, let schema = imageURL.scheme, schema == "https" {
+            if let imageURL = newValue, imageURL.isHttps {
                 thumbnailImage.hnk_setImage(from: imageURL)
             }
         }
@@ -89,7 +89,6 @@ class MainViewController: UIViewController {
     func showDetail(for article: Article) {
         performSegue(withIdentifier: "gotoArticleViewController", sender: article)
     }
-
 
 }
 

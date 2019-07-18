@@ -22,10 +22,13 @@ class ArticleViewController: UIViewController {
     }
     
     func loadContent() {
+        if let title = article?.title {
+            self.navigationItem.title = title
+        }
         if let url = article?.url {
             webview.load(URLRequest(url: url))
         }
-        if let thumbnailURL = article?.thumbnail {
+        if let thumbnailURL = article?.thumbnail, thumbnailURL.isHttps {
             iconImageView.hnk_setImage(from: thumbnailURL) 
         }
     }
