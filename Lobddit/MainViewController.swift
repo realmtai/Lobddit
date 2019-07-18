@@ -8,18 +8,32 @@
 
 import UIKit
 
+class MainCollectionCell: UICollectionViewCell {
+    static let id: String = "MainCollectionCell"
+    
+    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var thumbnailImage: UIImageView!
+    
+    var text: String {
+        get { return textLabel.text ?? "" }
+        set(newValue) { textLabel.text = newValue }
+    }
+    
+}
+
 class MainViewController: UIViewController {
     
     fileprivate let api = RedditAPI()
     fileprivate let workQueue = DispatchQueue(label: "com.michael.tai.mainviewcontroller.workq")
     
     fileprivate var dataStore: [Article] = [] {
-        didSet {
-            DispatchQueue.main.async {
-                
-            }
-        }
+        didSet { DispatchQueue.main.async { self.mainCollectionView.reloadData() } }
     }
+    
+    //MARK:- UI Elements
+    //MARK:
+
+    @IBOutlet weak var mainCollectionView: UICollectionView!
     
     
     //MARK:- Life Cycle
@@ -56,3 +70,20 @@ class MainViewController: UIViewController {
 
 }
 
+
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataStore.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionCell.id, for: indexPath) as? MainCollectionCell else {
+            return UICollectionViewCell(frame: .zero)
+        }
+        let data = dataStore[indexPath.row]
+        cell.text = data.title ?? ""
+        return cell
+    }
+    
+}

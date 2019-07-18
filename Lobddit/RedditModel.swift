@@ -39,6 +39,7 @@ struct Child: Codable {
 }
 
 struct Article: Codable {
+    let title: String?
     let url: URL?
     let thumbnail: URL?
     let thumbnailWidth: Double?
@@ -47,12 +48,14 @@ struct Article: Codable {
     private enum CodingKeys: String, CodingKey {
         case url
         case thumbnail
+        case title
         case thumbnailWidth = "thumbnail_width"
         case thumbnailHeight = "thumbnail_height"
     }
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
+        title = try? values.decode(String.self, forKey: .title)
         url = try? values.decode(URL.self, forKey: .url)
         thumbnail = try? values.decode(URL.self, forKey: .thumbnail)
         thumbnailWidth = try? values.decode(Double.self, forKey: .thumbnailWidth)
