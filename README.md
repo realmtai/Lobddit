@@ -3,9 +3,9 @@
 
 Setup
 ----
-* - `git clone --recurse-submodules git@github.com:theyongdai/Lobddit.git`
-* - Update the development team 
-* - Run in XCode
+* `git clone --recurse-submodules git@github.com:theyongdai/Lobddit.git`
+* Update the development team 
+* Run in XCode
 
 
 
