@@ -42,7 +42,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7B-9G-R19">
-                                                    <rect key="frame" x="0.0" y="117.5" width="140" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="20.5"/>
                                                     <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -51,11 +51,11 @@
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Mju-qz-7CY" secondAttribute="bottom" id="332-JE-4ne"/>
                                             <constraint firstItem="h7B-9G-R19" firstAttribute="leading" secondItem="hwJ-Ky-JKJ" secondAttribute="leading" id="GMe-VE-Cbk"/>
                                             <constraint firstAttribute="trailing" secondItem="Mju-qz-7CY" secondAttribute="trailing" id="NMH-0T-ngd"/>
                                             <constraint firstItem="Mju-qz-7CY" firstAttribute="leading" secondItem="hwJ-Ky-JKJ" secondAttribute="leading" id="Ova-ik-yOK"/>
-                                            <constraint firstItem="Mju-qz-7CY" firstAttribute="top" secondItem="hwJ-Ky-JKJ" secondAttribute="top" id="dh7-Uq-76c"/>
-                                            <constraint firstAttribute="bottom" secondItem="h7B-9G-R19" secondAttribute="bottom" id="kX7-DS-P1r"/>
+                                            <constraint firstItem="h7B-9G-R19" firstAttribute="top" secondItem="hwJ-Ky-JKJ" secondAttribute="top" id="ZQw-kU-mMG"/>
                                             <constraint firstAttribute="trailing" secondItem="h7B-9G-R19" secondAttribute="trailing" id="ppa-cU-6P9"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
