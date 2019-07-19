@@ -74,7 +74,7 @@ extension ArticleViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         DispatchQueue.main.async {
-            APESuperHUD.dismissAll(animated: true)
+            APESuperHUD.show(style: .textOnly, title: "Yikes...", message: error.localizedDescription, completion: nil)
         }
     }
     
