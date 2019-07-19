@@ -35,13 +35,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="140" height="138"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mju-qz-7CY">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mju-qz-7CY">
                                                     <rect key="frame" x="0.0" y="0.0" width="140" height="138"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="138" id="oDR-1d-op3"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7B-9G-R19">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7B-9G-R19">
                                                     <rect key="frame" x="0.0" y="117.5" width="140" height="20.5"/>
                                                     <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -58,8 +58,20 @@
                                             <constraint firstAttribute="bottom" secondItem="h7B-9G-R19" secondAttribute="bottom" id="kX7-DS-P1r"/>
                                             <constraint firstAttribute="trailing" secondItem="h7B-9G-R19" secondAttribute="trailing" id="ppa-cU-6P9"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="textLabel" destination="h7B-9G-R19" id="dYA-34-iGQ"/>
+                                            <outlet property="thumbnailHeightConstraint" destination="oDR-1d-op3" id="CEG-tZ-Ala"/>
                                             <outlet property="thumbnailImage" destination="Mju-qz-7CY" id="DGP-F4-aPt"/>
                                         </connections>
                                     </collectionViewCell>

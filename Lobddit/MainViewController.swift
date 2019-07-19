@@ -13,6 +13,8 @@ class MainCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var thumbnailImage: UIImageView!
+    @IBOutlet weak var thumbnailHeightConstraint: NSLayoutConstraint!
+    
     
     var text: String {
         get { return textLabel.text ?? "" }
@@ -32,6 +34,11 @@ class MainCollectionCell: UICollectionViewCell {
                 thumbnailImage.isHidden = true
             }
         }
+    }
+    
+    var thumbnailHeight: CGFloat {
+        get { return thumbnailHeightConstraint.constant }
+        set(newValue) { thumbnailHeightConstraint.constant = newValue }
     }
 
     override func prepareForReuse() {
@@ -139,20 +146,40 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionCell.id, for: indexPath) as? MainCollectionCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionCell.id,
+                                                            for: indexPath) as? MainCollectionCell,
+            let layout = collectionView.collectionViewLayout as? CHTCollectionViewWaterfallLayout else {
             return UICollectionViewCell(frame: .zero)
         }
+        let cellWidth = Double(layout.itemWidth(inSection: indexPath.section))
         let datum = dataStore[indexPath.row]
+        
         cell.text = datum.title ?? ""
+        if let imgHeight = datum.thumbnailHeight,
+            let imgWidth = datum.thumbnailWidth {
+            cell.thumbnailHeight = CGFloat((cellWidth * imgHeight) / imgWidth)
+        }
         cell.imageURL = datum.thumbnail
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         let datum = dataStore[indexPath.row]
-        let text = datum.title ?? ""
-        let height = text.height(withConstrainedWidth: collctionViewMagicConstant, font: UIFont.systemFont(ofSize: 18, weight: .regular))
-        return CGSize(width: collctionViewMagicConstant, height: height)
+        guard let layout = collectionViewLayout as? CHTCollectionViewWaterfallLayout,
+            let text = datum.title else {
+            return .zero
+        }
+        
+        let cellWidth = layout.itemWidth(inSection: indexPath.section)
+        let textHeight = text.height(withConstrainedWidth: cellWidth, font: UIFont.systemFont(ofSize: 17, weight: .regular))
+        var thumbnailHeight: CGFloat = 0
+        if let url = datum.thumbnail, url.isHttps {
+            let imgHeight = CGFloat(datum.thumbnailHeight ?? 0)
+            let imgWidth = CGFloat(datum.thumbnailWidth ?? 1)
+            thumbnailHeight = CGFloat((cellWidth * imgHeight) / imgWidth)
+        }
+        return CGSize(width: cellWidth, height: textHeight+thumbnailHeight)
     }
     
     
