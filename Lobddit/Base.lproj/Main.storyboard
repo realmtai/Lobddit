@@ -147,6 +147,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dek-zo-jqy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CS4-d1-vcj">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="0kS-N5-9A0">
+                            <connections>
+                                <action selector="requestRefresh:" destination="DEQ-Wx-JNQ" id="WnJ-Ts-RQT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="iconHeightConstraint" destination="C49-4K-BWZ" id="O1d-HE-3hi"/>
                         <outlet property="iconImageView" destination="mA8-MC-Iv9" id="ELQ-1n-nfy"/>

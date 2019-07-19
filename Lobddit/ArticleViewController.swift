@@ -13,6 +13,9 @@ class ArticleViewController: UIViewController {
     
     var article: Article? = nil
     
+    //MARK:- UI Elements
+    //MARK:
+
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var iconHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var iconWidthConstraint: NSLayoutConstraint!
@@ -21,13 +24,22 @@ class ArticleViewController: UIViewController {
         didSet { webview.navigationDelegate = self }
     }
     
+    
+    //MARK:- Life Cycle
+    //MARK:
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        precondition(article != nil)
+        precondition(article != nil, "Should never be here without an article to display!!!")
+        
         DispatchQueue.main.async {
             self.loadContent()
         }
     }
+    
+    
+    //MARK:- Actions
+    //MARK:
     
     func loadContent() {
         APESuperHUD.show(style: .loadingIndicator(type: .standard), title: nil, message: "Loading", completion: nil)
@@ -50,7 +62,13 @@ class ArticleViewController: UIViewController {
         }
     }
     
+    @IBAction func requestRefresh(_ sender: UIBarButtonItem) {
+        if webview.isLoading { return }
+        loadContent()
+    }
+    
 }
+
 
 extension ArticleViewController: WKNavigationDelegate {
     
