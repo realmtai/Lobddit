@@ -1,7 +1,17 @@
 #  Notes
 
 
+Setup
+----
+1 - `git clone --recurse-submodules git@github.com:theyongdai/Lobddit.git`
+2 - Update development team 
+3 - Run in XCode
+
+
+
+
 Acceptance Criteria:
+----
 
 
 
@@ -22,6 +32,7 @@ Acceptance Criteria:
 
 
 What we are looking for:
+----
 
 
 
