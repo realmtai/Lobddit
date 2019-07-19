@@ -48,6 +48,7 @@ class MainCollectionCell: UICollectionViewCell {
     
 }
 
+
 class MainViewController: UIViewController {
     
     fileprivate let api = RedditAPI()
@@ -64,6 +65,7 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var mainCollectionView: UICollectionView! {
         didSet {
+            mainCollectionView.refreshControl = collectionViewRefreshControl()
         }
     }
     
@@ -99,6 +101,7 @@ class MainViewController: UIViewController {
     func fetchData() {
         DispatchQueue.main.async {
             APESuperHUD.show(style: .loadingIndicator(type: .standard), title: nil, message: "Loading", completion: nil)
+            self.mainCollectionView.refreshControl = nil
         }
         api.getArticles(.swift) {[weak self] result in
             self?.workQueue.async { [weak self] in
@@ -108,16 +111,22 @@ class MainViewController: UIViewController {
                     strongSelf.dataStore = articles
                     DispatchQueue.main.async {
                         APESuperHUD.dismissAll(animated: true)
+                        strongSelf.mainCollectionView.refreshControl = strongSelf.collectionViewRefreshControl()
                     }
                 case .failure(let error):
                     DispatchQueue.main.async {
                         APESuperHUD.show(style: .textOnly, title: "Yikes...",
                                          message: error.localizedDescription,
                                          completion: nil)
+                        strongSelf.mainCollectionView.refreshControl = strongSelf.collectionViewRefreshControl()
                     }
                 }
             }
         }
+    }
+    
+    @objc func requestDataRefresh(_ sender: UIRefreshControl) {
+        fetchData()
     }
     
     func showDetail(for article: Article) {
@@ -129,6 +138,12 @@ class MainViewController: UIViewController {
         let width = size.width
         layout.columnCount = Int(width/collctionViewMagicConstant)
         return layout
+    }
+    
+    func collectionViewRefreshControl() -> UIRefreshControl {
+        let refreshControl = UIRefreshControl(frame: .zero)
+        refreshControl.addTarget(self, action: #selector(requestDataRefresh(_:)), for: .valueChanged)
+        return refreshControl
     }
 
 }
